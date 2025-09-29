@@ -1,4 +1,4 @@
-import { ShieldCheck, ZapOff, Scale } from 'lucide-react';
+import { Verified, ReportGmailerrorred, Balance } from '@mui/icons-material';
 
 export default function VacinasSegurasPage() {
   return (
@@ -15,7 +15,7 @@ export default function VacinasSegurasPage() {
         
         {/* Fato 1: Rigor dos Testes */}
         <section className="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-2xl items-center">
-          <ShieldCheck className="h-12 w-12 text-green-600 mr-6 flex-shrink-0" />
+          <Verified className="h-12 w-12 text-green-600 mr-6 flex-shrink-0" />
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Processo de Aprovação em 4 Fases</h2>
             <p className="text-gray-600">
@@ -26,9 +26,9 @@ export default function VacinasSegurasPage() {
 
         {/* Fato 2: Desmistificando Mitos */}
         <section className="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-2xl items-center">
-          <ZapOff className="h-12 w-12 text-red-500 mr-6 flex-shrink-0" />
+          <ReportGmailerrorred className="h-12 w-12 text-red-500 mr-6 flex-shrink-0" />
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Mito: "Causam Autismo"</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Mito: &quot;Causam Autismo&quot;</h2>
             <p className="text-gray-600">
               **Falso.** Este mito foi amplamente refutado por décadas de estudos científicos em todo o mundo. A pesquisa original que o propôs foi desmentida e o autor teve sua licença médica cassada. Não há ligação comprovada.
             </p>
@@ -37,7 +37,7 @@ export default function VacinasSegurasPage() {
 
         {/* Fato 3: Benefício vs. Risco */}
         <section className="flex flex-col md:flex-row bg-white p-6 rounded-xl shadow-2xl items-center">
-          <Scale className="h-12 w-12 text-teal-600 mr-6 flex-shrink-0" />
+          <Balance className="h-12 w-12 text-teal-600 mr-6 flex-shrink-0" />
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Os Benefícios Superam os Riscos</h2>
             <p className="text-gray-600">
@@ -48,7 +48,7 @@ export default function VacinasSegurasPage() {
       </div>
       
       <div className="mt-12 text-center text-sm text-gray-500">
-        **Fonte de Confiança:** Consulte sempre órgãos oficiais como a ANVISA, o Ministério da Saúde e a Organização Mundial da Saúde (OMS).
+  **Fonte de Confiança:** Consulte sempre órgãos oficiais como a ANVISA, o Ministério da Saúde e a Organização Mundial da Saúde (OMS).
       </div>
     </div>
   );

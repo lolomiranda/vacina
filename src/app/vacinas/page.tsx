@@ -1,4 +1,4 @@
-import { Baby, User, Stethoscope } from 'lucide-react';
+import { ChildCare, Person, MedicalServices } from '@mui/icons-material';
 
 export default function VacinasPage() {
   return (
@@ -16,7 +16,7 @@ export default function VacinasPage() {
         {/* Fase 1: Crianças */}
         <section className="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-yellow-500">
           <div className="flex items-center mb-4">
-            <Baby className="h-10 w-10 text-yellow-600 mr-4 bg-yellow-100 p-2 rounded-full" />
+            <ChildCare className="h-10 w-10 text-yellow-600 mr-4 bg-yellow-100 p-2 rounded-full" />
             <h2 className="text-3xl font-bold text-gray-900">Infância (0 a 10 anos)</h2>
           </div>
           <p className="text-gray-600 mb-4">
@@ -32,7 +32,7 @@ export default function VacinasPage() {
         {/* Fase 2: Adolescentes e Adultos */}
         <section className="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-purple-500">
           <div className="flex items-center mb-4">
-            <User className="h-10 w-10 text-purple-600 mr-4 bg-purple-100 p-2 rounded-full" />
+            <Person className="h-10 w-10 text-purple-600 mr-4 bg-purple-100 p-2 rounded-full" />
             <h2 className="text-3xl font-bold text-gray-900">Adultos e Adolescentes</h2>
           </div>
           <p className="text-gray-600 mb-4">
@@ -48,7 +48,7 @@ export default function VacinasPage() {
         {/* Fase 3: Idosos */}
         <section className="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-red-500">
           <div className="flex items-center mb-4">
-            <Stethoscope className="h-10 w-10 text-red-600 mr-4 bg-red-100 p-2 rounded-full" />
+            <MedicalServices className="h-10 w-10 text-red-600 mr-4 bg-red-100 p-2 rounded-full" />
             <h2 className="text-3xl font-bold text-gray-900">Idosos e Grupos de Risco</h2>
           </div>
           <p className="text-gray-600 mb-4">

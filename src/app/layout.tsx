@@ -11,6 +11,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body>
         <CssBaseline />
+        <Topbar />
         <Box component="main" sx={{ mt: 8, mb: 4 }}>
           <Container maxWidth="lg">{children}</Container>
         </Box>

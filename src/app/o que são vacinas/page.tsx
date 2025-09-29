@@ -1,4 +1,4 @@
-import { Syringe, Shield, Microscope } from 'lucide-react';
+import { Vaccines, Shield, Science } from '@mui/icons-material';
 
 export default function OQueSaoVacinasPage() {
   return (
@@ -15,7 +15,7 @@ export default function OQueSaoVacinasPage() {
         
         {/* Card 1: Introdução do Inimigo */}
         <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 transition duration-300 hover:shadow-xl">
-          <Microscope className="h-8 w-8 text-blue-500 mb-4" />
+          <Science className="h-8 w-8 text-blue-500 mb-4" />
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">1. Apresentando o Vírus</h2>
           <p className="text-gray-600">
             A vacina contém uma pequena porção (ou uma versão enfraquecida/inativada) do agente infeccioso. É o suficiente para o corpo reconhecer, mas não para causar a doença.
@@ -24,10 +24,10 @@ export default function OQueSaoVacinasPage() {
 
         {/* Card 2: Treinamento do Exército */}
         <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-teal-500 transition duration-300 hover:shadow-xl">
-          <Syringe className="h-8 w-8 text-teal-500 mb-4" />
+          <Vaccines className="h-8 w-8 text-teal-500 mb-4" />
           <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Ativação Imunológica</h2>
           <p className="text-gray-600">
-            Ao receber a vacina, seu **sistema imunológico** é ativado. Ele produz **anticorpos** (os "soldados") e **células de memória** para combater a ameaça simulada.
+            Ao receber a vacina, seu **sistema imunológico** é ativado. Ele produz **anticorpos** (os &quot;soldados&quot;) e **células de memória** para combater a ameaça simulada.
           </p>
         </div>
 

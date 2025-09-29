@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import * as React from 'react';
 import { usePathname } from 'next/navigation';
 import { Box, List, ListItemButton, ListItemIcon, ListItemText, Divider, Typography } from '@mui/material';
 import { navLinks } from './navData';
@@ -26,7 +27,7 @@ export default function Sidebar() {
       <List>
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
-          const Icon = link.icon as any;
+          const Icon = link.icon as React.ElementType | undefined;
           return (
             <ListItemButton key={link.name} component={Link} href={link.href} selected={isActive} sx={{ py: 1.5 }}>
               <ListItemIcon>
