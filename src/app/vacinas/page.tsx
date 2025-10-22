@@ -1,66 +1,120 @@
-import { ChildCare, Person, MedicalServices } from '@mui/icons-material';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Image from 'next/image';
 
 export default function VacinasPage() {
   return (
-    <div className="py-8">
-      <h1 className="text-4xl font-bold text-blue-600 mb-6 border-b pb-2">
-        Calendário Nacional de Vacinação
-      </h1>
-      <p className="text-xl text-gray-700 mb-8">
+    <Box sx={{ py: 6 }}>
+      <Typography variant="h3" component="h1" sx={{ color: 'primary.main', mb: 2, borderBottom: '4px solid', pb: 1 }}>
+        Calendário Nacional de Vacinação 🚑💉
+      </Typography>
+      <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
         Mantenha sua caderneta de vacinação em dia! A proteção se estende da infância à terceira idade.
-      </p>
+      </Typography>
 
-      {/* Seção por Fases da Vida */}
-      <div className="space-y-10">
-        
-        {/* Fase 1: Crianças */}
-        <section className="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-yellow-500">
-          <div className="flex items-center mb-4">
-            <ChildCare className="h-10 w-10 text-yellow-600 mr-4 bg-yellow-100 p-2 rounded-full" />
-            <h2 className="text-3xl font-bold text-gray-900">Infância (0 a 10 anos)</h2>
-          </div>
-          <p className="text-gray-600 mb-4">
-            A fase mais crucial para a proteção contra doenças graves.
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 pl-4">
-            <li>**Ao nascer:** BCG (Tuberculose) e Hepatite B.</li>
-            <li>**2, 4 e 6 meses:** Pentavalente, Rotavírus e Pneumocócica.</li>
-            <li>**15 meses:** Tríplice Viral (Sarampo, Caxumba, Rubéola) e Hepatite A.</li>
-          </ul>
-        </section>
+      <Grid container spacing={4} alignItems="stretch">
+        <Grid item xs={12} md={4}>
+          <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Box
+              sx={{
+                bgcolor: 'info.main',
+                color: 'common.white',
+                minHeight: { xs: 140, md: 180 },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                p: 2,
+                borderTopLeftRadius: 8,
+                borderTopRightRadius: 8,
+              }}
+            >
+              <Typography variant="h6" align="center">
+                Infância (0 a 10 anos) 👶
+              </Typography>
+            </Box>
 
-        {/* Fase 2: Adolescentes e Adultos */}
-        <section className="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-purple-500">
-          <div className="flex items-center mb-4">
-            <Person className="h-10 w-10 text-purple-600 mr-4 bg-purple-100 p-2 rounded-full" />
-            <h2 className="text-3xl font-bold text-gray-900">Adultos e Adolescentes</h2>
-          </div>
-          <p className="text-gray-600 mb-4">
-            Reforços são necessários e novas vacinas, como a HPV, são importantes.
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 pl-4">
-            <li>**HPV:** Indicada para meninas e meninos na adolescência.</li>
-            <li>**Dupla Adulto (dT):** Reforço a cada 10 anos contra Tétano e Difteria.</li>
-            <li>**Hepatite B:** Esquema de 3 doses (caso não tenha sido vacinado na infância).</li>
-          </ul>
-        </section>
+            <Box sx={{ p: 2 }}>
+              <Typography variant="body2" color="text.secondary">
+                A fase mais crucial para a proteção contra doenças graves. Consulte o calendário e mantenha doses em dia.
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 3 }}>
+                <li>🍼 Ao nascer: BCG e Hepatite B.</li>
+                <li>📅 2, 4 e 6 meses: Pentavalente, Rotavírus e Pneumocócica.</li>
+                <li>🎯 15 meses: Tríplice Viral e Hepatite A.</li>
+              </Box>
+            </Box>
+          </Paper>
+        </Grid>
 
-        {/* Fase 3: Idosos */}
-        <section className="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-red-500">
-          <div className="flex items-center mb-4">
-            <MedicalServices className="h-10 w-10 text-red-600 mr-4 bg-red-100 p-2 rounded-full" />
-            <h2 className="text-3xl font-bold text-gray-900">Idosos e Grupos de Risco</h2>
-          </div>
-          <p className="text-gray-600 mb-4">
-            Foco na proteção contra doenças respiratórias.
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 pl-4">
-            <li>**Influenza (Gripe):** Dose anual.</li>
-            <li>**Pneumocócica:** Proteção contra a pneumonia.</li>
-            <li>**COVID-19:** Doses de reforço conforme as diretrizes atuais.</li>
-          </ul>
-        </section>
-      </div>
-    </div>
+        <Grid item xs={12} md={4}>
+          <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Box
+              sx={{
+                bgcolor: 'secondary.main',
+                color: 'common.white',
+                minHeight: { xs: 140, md: 180 },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                p: 2,
+                borderTopLeftRadius: 8,
+                borderTopRightRadius: 8,
+              }}
+            >
+              <Typography variant="h6" align="center">
+                Adultos e Adolescentes 🧑‍🤝‍🧑
+              </Typography>
+            </Box>
+
+            <Box sx={{ p: 2 }}>
+              <Typography variant="body2" color="text.secondary">
+                Reforços são necessários e novas vacinas, como a HPV, são importantes. Verifique recomendações por faixa etária.
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 3 }}>
+                <li>🛡️ HPV: indicada na adolescência.</li>
+                <li>🔁 Dupla Adulto (dT): reforço a cada 10 anos.</li>
+                <li>💉 Hepatite B: esquema de 3 doses se necessário.</li>
+              </Box>
+            </Box>
+          </Paper>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Box
+              sx={{
+                bgcolor: 'warning.main',
+                color: 'common.white',
+                minHeight: { xs: 140, md: 180 },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                p: 2,
+                borderTopLeftRadius: 8,
+                borderTopRightRadius: 8,
+              }}
+            >
+              <Typography variant="h6" align="center">
+                Idosos e Grupos de Risco 👵👴
+              </Typography>
+            </Box>
+
+            <Box sx={{ p: 2 }}>
+              <Typography variant="body2" color="text.secondary">
+                Foco na proteção contra doenças respiratórias. Vacinações periódicas reduzem riscos significativamente.
+              </Typography>
+              <Box component="ul" sx={{ mt: 1, pl: 3 }}>
+                <li>🩺 Influenza: dose anual.</li>
+                <li>🫁 Pneumocócica: Proteção contra pneumonia.</li>
+                <li>🦠 COVID-19: reforços conforme diretrizes.</li>
+              </Box>
+            </Box>
+          </Paper>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }

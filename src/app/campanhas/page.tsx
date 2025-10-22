@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import PlaceIcon from '@mui/icons-material/Place';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default function CampanhasPage() {
   return (
@@ -14,7 +15,7 @@ export default function CampanhasPage() {
       <Typography variant="h4" color="primary" gutterBottom>Campanhas de Vacinação Atuais</Typography>
       <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3 }}>Fique atento às campanhas de vacinação em andamento para garantir a proteção da sua família e da sua comunidade.</Typography>
 
-      <Box sx={{ bgcolor: 'purple.50', p: 3, borderRadius: 2, boxShadow: 3, borderTop: 4, borderColor: 'primary.main', mb: 4 }}>
+  <Box sx={{ bgcolor: 'background.paper', p: 3, borderRadius: 2, boxShadow: 3, borderTop: '4px solid', borderColor: 'primary.main', mb: 4 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
           <CampaignIcon color="primary" sx={{ mr: 1 }} />
           <Typography variant="h6" color="primary">Campanha Nacional Contra a Gripe (Influenza)</Typography>
@@ -33,7 +34,7 @@ export default function CampanhasPage() {
           </Box>
         </Box>
 
-        <Button variant="contained" color="primary">Encontre o Posto Mais Próximo</Button>
+  <Button variant="contained" color="primary" aria-label="encontre-posto" startIcon={<LocationOnIcon />}>Encontre o Posto Mais Próximo</Button>
       </Box>
 
       <Typography variant="h5" sx={{ mb: 2 }}>Próximas ou de Rotina</Typography>

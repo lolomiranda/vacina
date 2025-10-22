@@ -9,6 +9,8 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import Link from 'next/link';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 export default function HomePage() {
   return (
@@ -27,36 +29,42 @@ export default function HomePage() {
         </Box>
       </Box>
 
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={4}>
-          <Paper sx={{ p: 3 }}>
+      <Grid container spacing={3} alignItems="stretch">
+        <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
+          <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', height: '100%', minHeight: { xs: 200, md: 260 } }}>
             <BoltIcon color="primary" sx={{ mb: 1 }} />
             <Typography variant="h6">Ciência Rápida</Typography>
             <Typography variant="body2">Descubra como as vacinas funcionam em uma explicação simples e direta, apoiada por dados científicos.</Typography>
-            <Box sx={{ mt: 1 }}>
-              <Link href="https://butantan.gov.br/soros-e-vacinas/vacinas">Entenda a Ciência →</Link>
+            <Box sx={{ mt: 'auto' }}>
+              <Button variant="contained" color="primary" component="a" href="https://butantan.gov.br/butantan-educa" endIcon={<OpenInNewIcon />}>
+                Entenda a Ciência
+              </Button>
             </Box>
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <Paper sx={{ p: 3 }}>
+        <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
+          <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', height: '100%', minHeight: { xs: 200, md: 260 } }}>
             <LightbulbIcon color="success" sx={{ mb: 1 }} />
             <Typography variant="h6">Mitos e Fatos</Typography>
             <Typography variant="body2">Combata a desinformação. Encontre respostas claras e baseadas em evidências sobre a segurança vacinal.</Typography>
-            <Box sx={{ mt: 1 }}>
-              <Link href="https://butantan.gov.br/soros-e-vacinas/vacinas">Tire suas Dúvidas →</Link>
+            <Box sx={{ mt: 'auto' }}>
+              <Button variant="contained" color="secondary" component="a" href="https://butantan.gov.br/covid/butantan-tira-duvida/tira-duvida-noticias" endIcon={<OpenInNewIcon />}>
+                Tire suas Dúvidas
+              </Button>
             </Box>
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <Paper sx={{ p: 3 }}>
+        <Grid item xs={12} md={4} sx={{ display: 'flex' }}>
+          <Paper sx={{ p: 3, display: 'flex', flexDirection: 'column', height: '100%', minHeight: { xs: 200, md: 260 } }}>
             <CampaignIcon color="info" sx={{ mb: 1 }} />
             <Typography variant="h6">Calendário Atualizado</Typography>
             <Typography variant="body2">Tenha acesso ao calendário de vacinação e veja as próximas campanhas perto de você.</Typography>
-            <Box sx={{ mt: 1 }}>
-              <Link href="/vacinas">Ver Calendário →</Link>
+            <Box sx={{ mt: 'auto' }}>
+              <Button variant="contained" color="primary" component={Link} href="/vacinas" endIcon={<VolunteerActivismIcon />}>
+                Ver Calendário
+              </Button>
             </Box>
           </Paper>
         </Grid>
